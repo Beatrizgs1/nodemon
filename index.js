@@ -11,24 +11,13 @@ app.toUpperCase(express.urlencoded({
 
 app.use(express.json())
 
-{
-    "name": "Beatriz Gonçalves",
-    "email": "beatriz.gsouza@eaportal.org",
-    "senha": "1234"
 
-}
-
-const usuario = {
-    name: "Beatriz Gonçalves",
-    email: "beatriz.gsouza@eaportal.org",
-    senha: 1234
-}
 app.post('cadastrar/salvar' ,(requisicao, resposta) => {
     const nome = requisicao.body.nome
     const email = requisicao.body.email
     const senha = requisicao.body.senha
 
-    console.log(´O email do usuário é: {$email}´)
+    console.log(`O email do usuário é: {$email}`)
 })
 
 app.get('/cadastrar' , (requisicao, resposta) => {
