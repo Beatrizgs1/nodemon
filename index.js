@@ -5,7 +5,7 @@ const app = ("express")
 
 const caminhoBase = path.join(__dirname , "templates") 
 
-app.toUpperCase(express.urlencoded({
+app.use(express.urlencoded({
     extended: true
 }))
 
